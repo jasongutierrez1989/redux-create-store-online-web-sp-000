@@ -1,4 +1,11 @@
-let state;
+function() {
+  let state;
+ 
+  function dispatch(action) {
+    state = reducer(state, action);
+    render();
+  }
+}
 
 function reducer(state = { count: 0 }, action) {
   switch (action.type) {
